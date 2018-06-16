@@ -8,7 +8,6 @@ import { ServicesComponent } from './panels/services/services.component';
 import { ProcessPreviewComponent } from './panels/process/process-preview/process-preview.component';
 
 const routes: Routes = [
-    { path: '', component: HostsComponent },
     { path: 'hosts', component: HostsComponent },
     {
         path: 'process', component: ProcessComponent,
@@ -18,6 +17,8 @@ const routes: Routes = [
         ]
     },
     { path: 'services', component: ServicesComponent },
+    { path: '', pathMatch: 'full', redirectTo: '/hosts' },
+    { path: '**', redirectTo: '/hosts' }
 ];
 
 
