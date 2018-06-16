@@ -1,0 +1,28 @@
+<div class="services-list" *ngIf="services.length">
+  <div class="select">
+    Группировать по:
+    <select [ngModel]="selectedOption" (ngModelChange)="optionSelected($event)">
+      <option disabled value="-1">Выберите способ</option>
+      <option value="name">Названию</option>
+      <option value="status">Статусу</option>
+      <option value="version">Версии</option>
+    </select>
+  </div>
+  <div class="service-card" *ngFor="let s of services">
+    <div class="title">
+      {{s.name}}
+    </div>
+    <p>
+      <b>Статус:</b> {{states[s.status]}}
+    </p>
+    <p>
+      <b>Версия:</b> {{s.version}}
+    </p>
+    <p>
+      <b>Тэги:</b> {{s.tags | join}}
+    </p>
+  </div>
+</div>
+
+
+<app-spinner *ngIf="!services.length"></app-spinner>

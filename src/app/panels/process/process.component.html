@@ -1,0 +1,19 @@
+
+<div class="process-container" *ngIf="processes.length">
+    <div class="list-container">
+        <dx-list [items]="processes" [width]="scrollListWidth" [height]="scrollListHeight" 
+        selectionMode="single" (onSelectionChanged)="onSelectionChanged()"
+        [(selectedItems)]="currentItem">
+            <div *dxTemplate="let data of 'item'">
+                <div>
+                    <a>{{data.name}}</a>
+                </div>
+            </div>
+        </dx-list>
+    </div>
+    <div class="process-preview">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+
+<app-spinner *ngIf="!processes.length"></app-spinner>

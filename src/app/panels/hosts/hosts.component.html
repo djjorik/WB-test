@@ -1,0 +1,36 @@
+<div id="accordion" *ngIf="hosts.length">
+    <dx-accordion #accordion [dataSource]="hosts" [collapsible]="true" [multiple]="true" [animationDuration]="300" [selectedItems]="[hosts[0]]">
+        <div *dxTemplate="let host of 'title'">
+            <h1>{{host.name}}</h1>
+        </div>
+        <div *dxTemplate="let host of 'item'">
+            <div>
+                <p>
+                    <b>Состояние: </b>
+                    <span>{{state[host.state]}}</span>
+                </p>
+            </div>
+            <div>
+                <p>
+                    <b> Загрузка памяти: </b>
+                    {{host.resources.memory}}
+                </p>
+                <p>
+                    <b> Загрузка дисков: </b>
+                    {{host.resources.memory}}
+                </p>
+                <p>
+                    <b> Загрузка процессора: </b>
+                    {{host.resources.memory}}
+                </p>
+                <p>
+                    <b> Запущенные сервисы:</b>
+                    {{host.services | join}}
+                </p>
+
+            </div>
+        </div>
+    </dx-accordion>
+</div>
+
+<app-spinner *ngIf="!hosts.length"></app-spinner>

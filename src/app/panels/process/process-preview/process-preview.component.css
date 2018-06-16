@@ -1,0 +1,12 @@
+.process-item {
+    padding: 15px 20px;
+}
+
+.process-item .button {
+    margin-top: 10px;
+}
+
+.spinner {
+    position: fixed;
+    right: 50%;
+}

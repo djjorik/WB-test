@@ -1,0 +1,28 @@
+.process-container {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.list-container {
+    margin-bottom: 15px;
+}
+
+::ng-deep .dx-list-item-selected {
+    background: rgba(51, 122, 183, 0.7) !important;
+}
+
+@media all and (max-width: 620px) {
+    .process-container {
+        -webkit-flex-direction: column;
+        ;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}

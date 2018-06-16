@@ -1,0 +1,33 @@
+<div class="process-preview" *ngIf="choosenProcess && !isLoading">
+  <div class="process-item">
+    <b> Название:</b>
+    {{choosenProcess.name }}
+  </div>
+  <div class="process-item">
+    <b> Состояние: </b>
+    {{states[choosenProcess.state]}}
+    <div class="button">
+      <dx-button width="200" [text]="stateButtonOptions.text" [type]="stateButtonOptions.type" (onClick)="stateButtonOptions.onClick()"></dx-button>
+    </div>
+  </div>
+  <div class="process-item">
+    <b> Наличие ошибок:</b>
+    {{errors[choosenProcess.isErrors] }}
+  </div>
+  <div class="process-item">
+    <b> Дата последнего запуска:</b>
+    {{choosenProcess.lastStartDate | date:"dd-MM-yy hh:mm" }}
+  </div>
+  <div class="process-item">
+    <b> Дата последней ошибки:</b>
+    {{choosenProcess.lastErrorDate | date:"dd-MM-yy hh:mm"}}
+  </div>
+  <div class="process-item" *ngIf="!choosenProcess.isErrors">
+    <b> Последняя ошибка: </b>
+    {{choosenProcess.lastErrorInfo }}
+  </div>
+</div>
+
+<div class="spinner" *ngIf="!choosenProcess ||  isLoading">
+  <app-spinner></app-spinner>
+</div>

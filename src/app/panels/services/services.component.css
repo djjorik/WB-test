@@ -1,0 +1,49 @@
+.services-list {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    display: -webkit-flex;
+    /* Safari */
+    -webkit-flex-wrap: wrap;
+    /* Safari 6.1+ */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.service-card {
+    height: 150px;
+    width: 250px;
+    margin: 0 15px 15px;
+    -webkit-box-shadow: 6px 6px 20px 0px rgba(110, 140, 223, 0.15);
+    -moz-box-shadow: 6px 6px 20px 0px rgba(110, 140, 223, 0.15);
+    box-shadow: 6px 6px 20px 0px rgba(110, 140, 223, 0.15);
+}
+
+.title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.services-list p {
+    line-height: 1.5;
+}
+
+.select {
+    width: 100%;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.select select {
+    height: 22px;
+    margin-left: 10px;
+    font-size: 14px;
+}
