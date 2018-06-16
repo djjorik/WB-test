@@ -1,0 +1,81 @@
+[
+    {
+        "name": "Alfreda",
+        "state": 0,
+        "resources": {
+            "memory": 125,
+            "disk": 125,
+            "processor": 125
+        },
+        "services": [
+            "service1",
+            "service2",
+            "service3"
+        ]
+    },
+    {
+        "name": "Adams",
+        "state": 1,
+        "resources": {
+            "memory": 125,
+            "disk": 125,
+            "processor": 125
+        },
+        "services": [
+            "service1",
+            "service2",
+            "service3"
+        ]
+    },
+    {
+        "name": "Hurley",
+        "state": 0,
+        "resources": {
+            "memory": 125,
+            "disk": 125,
+            "processor": 125
+        }
+    },
+    {
+        "name": "Jane",
+        "state": 1,
+        "resources": {
+            "memory": 125,
+            "disk": 125,
+            "processor": 125
+        },
+        "services": [
+            "service1",
+            "service2",
+            "service3"
+        ]
+    },
+    {
+        "name": "Berger",
+        "state": 0,
+        "resources": {
+            "memory": 125,
+            "disk": 125,
+            "processor": 125
+        },
+        "services": [
+            "service1",
+            "service2",
+            "service3"
+        ]
+    },
+    {
+        "name": "Key",
+        "state": 1,
+        "resources": {
+            "memory": 125,
+            "disk": 125,
+            "processor": 125
+        },
+        "services": [
+            "service1",
+            "service2",
+            "service3"
+        ]
+    }
+]
